@@ -1,7 +1,9 @@
 // Variable Initialisation
 const container = document.querySelector(".container");
 const size = 16;
-const selectedColour = "#000000";
+
+let drawColour = "#000000";
+let backgroundColour = "#ffffff"
 
 // Set Container Grid Templates
 container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
@@ -36,5 +38,5 @@ function Draw(pTarget) {
     target.setAttribute(`data-touched`, true);
 
     // Change div Colour
-    target.style.background = selectedColour;
+    target.style.background = drawColour;
 }
