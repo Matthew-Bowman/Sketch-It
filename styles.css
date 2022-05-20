@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 .container {
     display: grid;
     width: 512px;
