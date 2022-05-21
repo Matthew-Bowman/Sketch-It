@@ -24,10 +24,13 @@ backgroundPicker.addEventListener("change", () => {
 });
 
 sizeRanger.addEventListener("change", () => {
-    size = sizeRanger.value;
-    sizeLabel.textContent = `${size}x${size}`;
     InitialiseGrid();
 });
+
+sizeRanger.addEventListener("input", () => {
+    size = sizeRanger.value;
+    sizeLabel.textContent = `${size}x${size}`;
+})
 
 // FUNCTIONS
 function InitialiseGrid() {
