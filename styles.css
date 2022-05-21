@@ -73,11 +73,32 @@ body {
     justify-content: center;
 }
 
+.size-label {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.size-picker {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+.size-picker::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: black;
+}
+
 .container {
     display: grid;
     width: 512px;
     aspect-ratio: 1;
     box-shadow: 0 0 5px 0 black;
 }
-
-/* Settings Panel */
