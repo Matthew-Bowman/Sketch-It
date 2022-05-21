@@ -10,7 +10,7 @@ let backgroundColour = "#ffffff";
 let size = 16;
 
 // Page Initialisation
-Init();
+InitialiseGrid();
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
@@ -23,7 +23,7 @@ backgroundPicker.addEventListener("change", () => {
 })
 
 // FUNCTIONS
-function Init() {
+function InitialiseGrid() {
     // Set Container Grid Templates
     container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
 
