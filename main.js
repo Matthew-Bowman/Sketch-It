@@ -3,6 +3,7 @@ const container = document.querySelector(".container");
 const pencilPicker = document.querySelector("#pencil-picker");
 const backgroundPicker = document.querySelector("#background-picker");
 const sizeRanger = document.querySelector(".size-picker");
+const sizeLabel = document.querySelector(".size-label");
 const resetButton = document.querySelector(".reset-button");
 
 let drawColour = "#000000";
@@ -20,6 +21,12 @@ pencilPicker.addEventListener("change", () => {
 backgroundPicker.addEventListener("change", () => {
     backgroundColour = backgroundPicker.value;
     UpdateBackground(backgroundColour);
+})
+
+sizeRanger.addEventListener("change", () => {
+    size = sizeRanger.value;
+    sizeLabel.textContent = `${size}x${size}`;
+    InitialiseGrid();
 })
 
 // FUNCTIONS
