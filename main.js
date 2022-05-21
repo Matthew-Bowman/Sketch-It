@@ -58,6 +58,9 @@ function InitialiseGrid() {
             div.setAttribute(`data-ypos`, y);
             div.setAttribute(`data-touched`, false);
 
+            // Style divs
+            div.style.background = backgroundColour;
+
             // Add Event Listeners for Drawing to div
             div.addEventListener("mouseover", e => {
                 // If Mouse Button 1 Pressed
