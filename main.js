@@ -27,6 +27,10 @@ sizeRanger.addEventListener("change", () => {
     InitialiseGrid();
 });
 
+resetButton.addEventListener("click", () => {
+    InitialiseGrid();
+})
+
 sizeRanger.addEventListener("input", () => {
     size = sizeRanger.value;
     sizeLabel.textContent = `${size}x${size}`;
