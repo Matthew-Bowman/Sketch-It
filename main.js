@@ -1,7 +1,7 @@
 // Variable Initialisation
 const container = document.querySelector(".container");
-const pencilPicker = document.querySelector(".pencil-picker");
-const backgroundPicker = document.querySelector(".background-picker");
+const pencilPicker = document.querySelector("#pencil-picker");
+const backgroundPicker = document.querySelector("#background-picker");
 const sizeRanger = document.querySelector(".size-picker");
 const resetButton = document.querySelector(".reset-button");
 
@@ -11,6 +11,12 @@ let size = 16;
 
 // Page Initialisation
 Init();
+
+// Event Listeners
+backgroundPicker.addEventListener("change", () => {
+    backgroundColour = backgroundPicker.value;
+    UpdateBackground(backgroundColour);
+})
 
 // FUNCTIONS
 function Init() {
