@@ -14,6 +14,9 @@ for(let x = 1; x <= size; x++) {
         // Create div
         const div = document.createElement("div");
 
+        // Give div Class
+        div.classList.add("tile");
+
         // Give div Attributes
         div.setAttribute(`data-xpos`, x);
         div.setAttribute(`data-ypos`, y);
