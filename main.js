@@ -1,5 +1,9 @@
 // Variable Initialisation
 const container = document.querySelector(".container");
+const pencilPicker = document.querySelector(".pencil-picker");
+const backgroundPicker = document.querySelector(".background-picker");
+const sizeRanger = document.querySelector(".size-picker");
+const resetButton = document.querySelector(".reset-button");
 
 let drawColour = "#000000";
 let backgroundColour = "#ffffff";
