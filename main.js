@@ -44,3 +44,17 @@ function Draw(pTarget) {
     // Change div Colour
     target.style.background = drawColour;
 }
+
+// Function: Iterates through each tile and changes
+//           background colours if necessary
+function UpdateBackground(pColour) {
+    // Initialisation
+    const tiles = document.querySelectorAll(".tile");
+    let colour = pColour;
+
+    // Iterate Through Tiles
+    tiles.forEach(tile => {
+        if(tile.getAttribute(`data-touched`) == `false`)
+            tile.style.background = colour;
+    })
+}
