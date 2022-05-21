@@ -89,6 +89,10 @@ body {
     border: 1px solid black;
 }
 
+.size-picker::-webkit-slider-thumb:hover {
+    cursor: pointer;
+}
+
 .size-picker::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
