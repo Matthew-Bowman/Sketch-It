@@ -2,7 +2,6 @@
 ## An Etch-A-Sketch For Drawing
 
 > To-Do
-- Change page layout
 - Add Rainbow Mode
 - Add Eraser
 - Add Background Changer
