@@ -24,6 +24,7 @@ for(let x = 1; x <= size; x++) {
 
         // Add Event Listeners for Drawing to div
         div.addEventListener("mouseover", e => {
+            // If Mouse Button 1 Pressed
             if(e.buttons == 1) 
                 Draw(e.target);
         });
