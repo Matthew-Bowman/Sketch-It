@@ -2,9 +2,82 @@
     user-select: none;
 }
 
+body {
+    font-family: sans-serif;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+}
+
+.heading {
+    font-size: 72px;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    gap: 64px;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 5px 0 black;
+
+    box-sizing: border-box;
+    padding: 32px 32px;
+    height: 100%;
+}
+
+.picker-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.colour-picker {
+    display: block;
+    width: 200%;
+    height: 200%;
+    border: none;
+    transform: translate(-25%, -25%);
+}
+
+.colours-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.colours-container .left,
+.colours-container .right {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-size: 18px;
+
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     display: grid;
     width: 512px;
     aspect-ratio: 1;
     box-shadow: 0 0 5px 0 black;
 }
+
+/* Settings Panel */
