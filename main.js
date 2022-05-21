@@ -13,6 +13,10 @@ let size = 16;
 Init();
 
 // Event Listeners
+pencilPicker.addEventListener("change", () => {
+    drawColour = pencilPicker.value;
+})
+
 backgroundPicker.addEventListener("change", () => {
     backgroundColour = backgroundPicker.value;
     UpdateBackground(backgroundColour);
