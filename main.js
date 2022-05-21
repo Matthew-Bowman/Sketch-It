@@ -16,18 +16,18 @@ InitialiseGrid();
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
     drawColour = pencilPicker.value;
-})
+});
 
 backgroundPicker.addEventListener("change", () => {
     backgroundColour = backgroundPicker.value;
     UpdateBackground(backgroundColour);
-})
+});
 
 sizeRanger.addEventListener("change", () => {
     size = sizeRanger.value;
     sizeLabel.textContent = `${size}x${size}`;
     InitialiseGrid();
-})
+});
 
 // FUNCTIONS
 function InitialiseGrid() {
