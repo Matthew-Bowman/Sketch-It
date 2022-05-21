@@ -31,6 +31,9 @@ sizeRanger.addEventListener("change", () => {
 
 // FUNCTIONS
 function InitialiseGrid() {
+    // Clear Container Contents
+    container.innerHTML = ``;
+
     // Set Container Grid Templates
     container.style.gridTemplate = `repeat(${size}, 1fr) / repeat(${size}, 1fr)`;
 
