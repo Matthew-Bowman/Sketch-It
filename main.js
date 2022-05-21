@@ -1,10 +1,12 @@
 // Variable Initialisation
 const container = document.querySelector(".container");
-const size = 16;
 
 let drawColour = "#000000";
-let backgroundColour = "#ffffff"
+let backgroundColour = "#ffffff";
+let size = 16;
 
+// Page Initialisation
+Init();
 
 // FUNCTIONS
 function Init() {
