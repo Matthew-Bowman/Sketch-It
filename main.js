@@ -14,7 +14,7 @@ for(let x = 1; x <= size; x++) {
         // Create div
         const div = document.createElement("div");
 
-        // Give giv Attributes
+        // Give div Attributes
         div.setAttribute(`data-xpos`, x);
         div.setAttribute(`data-ypos`, y);
         div.setAttribute(`data-touched`, false);
