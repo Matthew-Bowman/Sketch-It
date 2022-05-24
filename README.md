@@ -1,5 +1,5 @@
-# odin-sketch
-## An Etch-A-Sketch For Drawing
+# Sketch-It
+## An online drawing tool focussed on creating rasterised artwork
 
 > To-Do
 - Add Rainbow Mode
