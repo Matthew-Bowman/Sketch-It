@@ -10,3 +10,5 @@
 - Shading (Lighter & Darker)
 - Download Image
 - Grid
+
+> Known Issues
