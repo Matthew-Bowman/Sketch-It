@@ -12,3 +12,4 @@
 - Grid
 
 > Known Issues
+- Default Background Colour is Black but actual Colour is White
