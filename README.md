@@ -10,6 +10,7 @@
 - Shading (Lighter & Darker)
 - Download Image
 - Grid
+- Add Undo Functionality (CTRL + Z)
 
 > Known Issues
 - Default Background Colour is Black but actual Colour is White
