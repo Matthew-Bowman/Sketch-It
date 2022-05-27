@@ -121,7 +121,7 @@ body {
 
 .container {
     display: grid;
-    width: 512px;
+    min-width: 512px;
     aspect-ratio: 1;
     box-shadow: 0 0 5px 0 black;
 }
