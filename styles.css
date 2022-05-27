@@ -31,13 +31,6 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 5px 0 black;
-    padding: 16px;
-}
-
-fieldset {
-    border: none;
-    border-top: 1px solid black;
-    display: block;
     padding: 32px;
 }
 
