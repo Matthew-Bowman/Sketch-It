@@ -53,6 +53,10 @@ body {
     transform: translate(-25%, -25%);
 }
 
+.colour-picker:hover { 
+    cursor: pointer;
+}
+
 .colours-container {
     display: flex;
     gap: 24px;
