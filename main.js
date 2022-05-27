@@ -106,5 +106,11 @@ function UpdateBackground(pColour) {
 }
 
 function DrawGrid() {
+    const checked = gridCheckbox.checked;
+    const tiles = document.querySelectorAll(`.tile`);
 
+    if(checked) 
+        tiles.forEach(tile => tile.classList.add("grid"));
+    else 
+        tiles.forEach(tile => tile.classList.remove("grid"));
 }
