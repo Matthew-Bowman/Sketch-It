@@ -39,6 +39,7 @@ sizeRanger.addEventListener("input", () => {
 
 gridCheckbox.addEventListener("change", () => {
     // Add/Remove Grid
+    DrawGrid();
 })
 
 // FUNCTIONS
@@ -102,4 +103,8 @@ function UpdateBackground(pColour) {
         if (tile.getAttribute(`data-touched`) == `false`)
             tile.style.background = colour;
     })
+}
+
+function DrawGrid() {
+
 }
