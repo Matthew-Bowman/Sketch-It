@@ -5,6 +5,7 @@ const backgroundPicker = document.querySelector("#background-picker");
 const sizeRanger = document.querySelector(".size-picker");
 const sizeLabel = document.querySelector(".size-label");
 const resetButton = document.querySelector(".reset-button");
+const gridCheckbox = document.querySelector(".grid-option");
 
 let drawColour = "#000000";
 let backgroundColour = "#ffffff";
