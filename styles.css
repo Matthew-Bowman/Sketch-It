@@ -30,12 +30,15 @@ body {
 .settings-form {
     display: flex;
     flex-direction: column;
-
     box-shadow: 0 0 5px 0 black;
+    padding: 16px;
+}
 
-    box-sizing: border-box;
-    padding: 32px 32px;
-    height: fit-content;
+fieldset {
+    border: none;
+    border-bottom: 1px solid black;
+    display: block;
+    padding: 32px;
 }
 
 .picker-container {
