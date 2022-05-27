@@ -125,3 +125,8 @@ body {
     aspect-ratio: 1;
     box-shadow: 0 0 5px 0 black;
 }
+
+.tile {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
