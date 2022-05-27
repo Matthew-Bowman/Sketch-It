@@ -17,23 +17,29 @@
     <main class="main">
         <div class="settings">
             <form class="settings-form">
-                <div class="colours-container">
-                    <div class="left">
-                        <label for="pencil-picker" id="colour-label">Pencil</label>
-                        <div class="picker-container">
-                            <input class="colour-picker" id="pencil-picker" type="color" />
+                <fieldset>
+                    <div class="colours-container">
+                        <div class="left">
+                            <label for="pencil-picker" id="colour-label">Pencil</label>
+                            <div class="picker-container">
+                                <input class="colour-picker" id="pencil-picker" type="color" />
+                            </div>
+                        </div>
+                        <div class="right">
+                            <label for="background-picker" id="background-label">Background</label>
+                            <div class="picker-container">
+                                <input class="colour-picker" id="background-picker" type="color" value="#FFFFFF" />
+                            </div>
                         </div>
                     </div>
-                    <div class="right">
-                        <label for="background-picker" id="background-label">Background</label>
-                        <div class="picker-container">
-                            <input class="colour-picker" id="background-picker" type="color" value="#FFFFFF" />
-                        </div>
-                    </div>
-                </div>
-                <label for="size-picker" class="size-label">16x16</label>
-                <input class="size-picker" type="range" value="16" min="1" max="100" />
-                <input class="reset-button" type="button" value="Reset" />
+                </fieldset>
+                <fieldset>
+                    <label for="size-picker" class="size-label">16x16</label>
+                    <input class="size-picker" type="range" value="16" min="1" max="100" />
+                </fieldset>
+                <fieldset>
+                    <input class="reset-button" type="button" value="Reset" />
+                </fieldset>
             </form>
         </div>
         <div class="container"></div>
