@@ -41,6 +41,8 @@ body {
     height: 64px;
     border-radius: 50%;
     overflow: hidden;
+
+    box-shadow: 0 0 5px 0 #000;
 }
 
 .colour-picker {
