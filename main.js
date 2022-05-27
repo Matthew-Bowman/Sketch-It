@@ -37,6 +37,10 @@ sizeRanger.addEventListener("input", () => {
     sizeLabel.textContent = `${size}x${size}`;
 })
 
+gridCheckbox.addEventListener("change", () => {
+    // Add/Remove Grid
+})
+
 // FUNCTIONS
 function InitialiseGrid() {
     // Clear Container Contents
