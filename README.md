@@ -9,7 +9,6 @@
 - Save Feature
 - Shading (Lighter & Darker)
 - Download Image
-- Grid
 - Add Undo Functionality (CTRL + Z)
 
 > Known Issues
