@@ -31,17 +31,21 @@ sizeRanger.addEventListener("change", () => {
 
 resetButton.addEventListener("click", () => {
     InitialiseGrid();
-})
+});
 
 sizeRanger.addEventListener("input", () => {
     size = sizeRanger.value;
     sizeLabel.textContent = `${size}x${size}`;
-})
+});
 
 gridCheckbox.addEventListener("change", () => {
     // Add/Remove Grid
     DrawGrid();
-})
+});
+
+eraserButton.addEventListener("click", () => {
+    
+});
 
 // FUNCTIONS
 function InitialiseGrid() {
