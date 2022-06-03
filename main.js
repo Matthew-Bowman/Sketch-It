@@ -11,6 +11,7 @@ const eraserButton = document.querySelector(".eraser-button");
 let drawColour = "#000000";
 let backgroundColour = "#ffffff";
 let size = 16;
+let erasing = false;
 
 // Page Initialisation
 InitialiseGrid();
@@ -44,7 +45,7 @@ gridCheckbox.addEventListener("change", () => {
 });
 
 eraserButton.addEventListener("click", () => {
-    
+
 });
 
 // FUNCTIONS
