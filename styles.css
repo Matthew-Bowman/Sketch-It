@@ -117,6 +117,10 @@ body {
     cursor: pointer;
 }
 
+.button.selected {
+    background-color: rgb(205, 205, 205);
+}
+
 .container {
     display: grid;
     min-width: 512px;
