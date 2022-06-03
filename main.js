@@ -93,6 +93,10 @@ function Draw(pTarget) {
     // Initialisation
     let target = pTarget;
     
+    switch(erasing) {
+        
+    }
+
     // Change div Colour
     target.setAttribute(`data-touched`, true);
     target.style.background = drawColour;
