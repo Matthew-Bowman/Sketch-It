@@ -99,6 +99,11 @@ function Draw(pTarget) {
             target.setAttribute(`data-touched`, true);
             target.style.background = drawColour;
             break;
+        case true:
+            // Set div colour to bg colour
+            target.setAttribute(`data-touched`, false);
+            target.style.background = backgroundColour;
+            break;
     }
 
 }
