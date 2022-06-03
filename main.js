@@ -94,12 +94,13 @@ function Draw(pTarget) {
     let target = pTarget;
     
     switch(erasing) {
-        
+        case false:
+            // Change div Colour
+            target.setAttribute(`data-touched`, true);
+            target.style.background = drawColour;
+            break;
     }
 
-    // Change div Colour
-    target.setAttribute(`data-touched`, true);
-    target.style.background = drawColour;
 }
 
 // Function: Iterates through each tile and changes
