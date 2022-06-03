@@ -46,7 +46,6 @@ gridCheckbox.addEventListener("change", () => {
 
 eraserButton.addEventListener("click", () => {
     erasing = !erasing;
-    
     erasing ? eraserButton.classList.add("selected") : eraserButton.classList.remove("selected");
 });
 
@@ -93,9 +92,9 @@ function InitialiseGrid() {
 function Draw(pTarget) {
     // Initialisation
     let target = pTarget;
-    target.setAttribute(`data-touched`, true);
-
+    
     // Change div Colour
+    target.setAttribute(`data-touched`, true);
     target.style.background = drawColour;
 }
 
