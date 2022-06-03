@@ -45,7 +45,9 @@ gridCheckbox.addEventListener("change", () => {
 });
 
 eraserButton.addEventListener("click", () => {
-
+    erasing = !erasing;
+    
+    
 });
 
 // FUNCTIONS
