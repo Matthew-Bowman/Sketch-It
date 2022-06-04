@@ -135,6 +135,8 @@ body {
 
 .drawing-options input[type='radio'] {
     -webkit-appearance: none;
+    margin: 0;
+    padding: 0;
 }
 
 .drawing-options label {
