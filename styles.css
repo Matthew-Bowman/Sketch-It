@@ -137,6 +137,7 @@ body {
     display: flex;
     border: 1px solid black;
     border-radius: 8px;
+    overflow: hidden;
     margin: 8px 0;
     width: fit-content;
 }
