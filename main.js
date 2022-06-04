@@ -95,13 +95,13 @@ function Draw(pTarget) {
     
     const drawingOption = document.querySelector("input[name='drawing-option']:checked").value;
 
-    switch(erasing) {
-        case false:
+    switch(drawingOption) {
+        case 'Pencil':
             // Change div Colour
             target.setAttribute(`data-touched`, true);
             target.style.background = drawColour;
             break;
-        case true:
+        case 'Eraser':
             // Set div colour to bg colour
             target.setAttribute(`data-touched`, false);
             target.style.background = backgroundColour;
