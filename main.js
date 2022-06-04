@@ -93,6 +93,8 @@ function Draw(pTarget) {
     // Initialisation
     let target = pTarget;
     
+    const drawingOption = document.querySelector("input[name='drawing-option']:checked").value;
+
     switch(erasing) {
         case false:
             // Change div Colour
