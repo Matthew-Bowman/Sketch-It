@@ -135,6 +135,8 @@ body {
 
 .drawing-options {
     display: flex;
+    border: 1px solid black;
+    margin: 8px 0;
 }
 
 .drawing-options input[type='radio'] {
