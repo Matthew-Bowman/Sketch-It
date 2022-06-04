@@ -44,11 +44,6 @@ gridCheckbox.addEventListener("change", () => {
     DrawGrid();
 });
 
-eraserButton.addEventListener("click", () => {
-    erasing = !erasing;
-    erasing ? eraserButton.classList.add("selected") : eraserButton.classList.remove("selected");
-});
-
 // FUNCTIONS
 function InitialiseGrid() {
     // Clear Container Contents
