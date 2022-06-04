@@ -101,6 +101,11 @@ function Draw(pTarget) {
             target.style.background = backgroundColour;
             break;
         case 'Rainbow':
+            // Cycle through array
+            const shiftedColour = rainbowArray.shift();
+            target.setAttribute(`data-touched`, true);
+            target.style.background = shiftedColour;
+            rainbowArray.push(shiftedColour);
             break;
     }
 
