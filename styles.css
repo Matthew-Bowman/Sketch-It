@@ -134,7 +134,7 @@ body {
 }
 
 .drawing-options input[type='radio'] {
-    
+    -webkit-appearance: none;
 }
 
 @media only screen and (max-width: 576px) {
