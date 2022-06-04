@@ -148,7 +148,6 @@ body {
 .drawing-options label {
     display: inline-block;
     padding: 16px 16px;
-    margin: 8px 0;
     text-align: center;
     transition: 0.5s;
 }
