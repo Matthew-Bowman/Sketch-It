@@ -99,6 +99,8 @@ function Draw(pTarget) {
             target.setAttribute(`data-touched`, false);
             target.style.background = backgroundColour;
             break;
+        case 'Rainbow':
+            break;
     }
 
 }
