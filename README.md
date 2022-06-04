@@ -2,7 +2,6 @@
 ## An online drawing tool focussed on creating rasterised artwork
 
 > To-Do
-- Add Rainbow Mode
 - Remove Right Click Place
 - Remove Content Menu (Right Click)
 - Save Feature
