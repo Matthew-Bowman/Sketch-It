@@ -155,6 +155,10 @@ body {
     transition: 0.5s;
 }
 
+.left-border {
+    border-left: 1px solid black;
+}
+
 input[type="radio"]:checked + label {
 	background-color: rgb(230, 230, 230);
 }
