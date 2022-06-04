@@ -137,6 +137,14 @@ body {
     -webkit-appearance: none;
 }
 
+.drawing-options label {
+    display: block;
+    padding: 16px 16px;
+    margin: 8px 0;
+    border: 1px solid black;
+    text-align: center;
+}
+
 @media only screen and (max-width: 576px) {
     .container {
         min-width: 256px;
