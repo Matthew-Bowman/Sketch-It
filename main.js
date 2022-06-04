@@ -10,7 +10,7 @@ const gridCheckbox = document.querySelector(".grid-option");
 let drawColour = "#000000";
 let backgroundColour = "#ffffff";
 let size = 16;
-const rainbowArray = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
+let rainbowArray = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"];
 
 // Page Initialisation
 InitialiseGrid();
