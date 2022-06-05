@@ -164,7 +164,7 @@ body {
     cursor: pointer;
 }
 
-input[type="radio"]:checked + label {
+.drawing-options input[type="radio"]:checked + label {
 	background-color: rgb(230, 230, 230);
 }
 
