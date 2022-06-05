@@ -107,6 +107,10 @@ function Draw(pTarget) {
             target.style.background = shiftedColour;
             rainbowArray.push(shiftedColour);
             break;
+        case 'Darker':
+            break;
+        case 'Lighter':
+            break;
     }
 
 }
