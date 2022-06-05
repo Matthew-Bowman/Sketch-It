@@ -30,7 +30,7 @@ body {
 .settings-form {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 5px 0 black;
+    box-shadow: 0 0 5px 0 rgb(36, 36, 36);
     padding: 32px;
 }
 
@@ -40,7 +40,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
 
-    box-shadow: 0 0 5px 0 #000;
+    box-shadow: 0 0 5px 0 rgb(36, 36, 36);
 }
 
 .colour-picker {
@@ -90,7 +90,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    border: 1px solid rgb(36, 36, 36);
 }
 
 .size-picker::-webkit-slider-thumb:hover {
@@ -101,14 +101,14 @@ body {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background: black;
+    background: rgb(36, 36, 36);
 }
 
 .button {
     margin: 8px 0;
     padding: 8px 16px;
     font-size: 18px;
-    border: 1px solid black;
+    border: 1px solid rgb(36, 36, 36);
     background: none;
 }
 
@@ -125,17 +125,17 @@ body {
     display: grid;
     min-width: 512px;
     aspect-ratio: 1;
-    box-shadow: 0 0 5px 0 black;
+    box-shadow: 0 0 5px 0 rgb(36, 36, 36);
 }
 
 .grid {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 1px solid rgb(36, 36, 36);
+    border-left: 1px solid rgb(36, 36, 36);
 }
 
 .drawing-options {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid rgb(36, 36, 36);
     border-radius: 8px;
     overflow: hidden;
     margin: 8px 0;
@@ -156,7 +156,7 @@ body {
 }
 
 .left-border {
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(36, 36, 36);
 }
 
 .drawing-options input[type="radio"]:hover + label {
