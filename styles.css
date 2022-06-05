@@ -165,7 +165,8 @@ body {
 }
 
 .drawing-options input[type="radio"]:checked + label {
-	background-color: rgb(230, 230, 230);
+	background-color: rgb(36, 36, 36);
+    color: rgb(230, 230, 230);
 }
 
 @media only screen and (max-width: 576px) {
