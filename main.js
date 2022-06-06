@@ -195,3 +195,80 @@ function RGBtoHSL(pR, pG, pB) {
         l: (l * 100).toFixed(2),
     };
 }
+
+function HSLtoRGB(pH, pS, pL) {
+    // Initialisation
+    const h = pH / 360;
+    const s = pS / 100;
+    const l = pL / 100;
+
+    let r, g, b;
+    let temp1, temp2;
+    let tempR, tempG, tempB;
+
+    // Checking for gray
+    if (s == 0) {
+        r = l / 100 * 255;
+        g = l / 100 * 255;
+        b = l / 100 * 255;
+    } else {
+        // Setting temporary variables
+        if (l < 0.5)
+            temp1 = l * (1 + s);
+        else
+            temp1 = l + s - l * s
+
+        temp2 = 2 * l - temp1;
+
+        tempR = h + 0.333;
+        tempG = h;
+        tempB = h - 0.333;
+
+        // Check values are between 0-1
+        if (tempR < 0)
+            tempR += 1;
+        else if (tempR > 1)
+            tempR -= 1;
+
+        if (tempG < 0)
+            tempG += 1;
+        else if (tempG > 1)
+            tempG -= 1;
+
+        if (tempB < 0)
+            tempB += 1;
+        else if (tempB > 1)
+            tempB -= 1;
+
+        // Perform Tests
+        r = Tests(temp1, temp2, tempR) * 255;
+        g = Tests(temp1, temp2, tempG) * 255;
+        b = Tests(temp1, temp2, tempB) * 255;
+    }
+
+    // Return RGB
+    return {
+        r: Math.round(r),
+        g: Math.round(g),
+        b: Math.round(b),
+    };
+
+    // METHODS
+    function Tests(temp1, temp2, temp3) {
+        // Initialisation
+        let val;
+
+        // Tests
+        if (6 * temp3 < 1)
+            val = temp2 + (temp1 - temp2) * 6 * temp3;
+        else if (2 * temp3 < 1)
+            val = temp1;
+        else if (3 * temp3 < 2)
+            val = temp2 + (temp1 - temp2) * (0.666 - temp3) * 6
+        else
+            val = temp2;
+
+        // Return value
+        return val;
+    }
+}
