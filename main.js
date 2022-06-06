@@ -75,7 +75,7 @@ function InitialiseGrid() {
                     Draw(e.target);
             });
 
-            div.addEventListener("mousedown", e => Draw(e.target));
+            div.addEventListener("mousedown", e => { if (e.buttons == 1) Draw(e.target) });
 
             // Add div to Container
             container.appendChild(div);
@@ -112,14 +112,14 @@ function Draw(pTarget) {
             // Get colour
             original = target.style.background;
             splitRGB = original.substring(4).slice(0, -1).split(`, `);
-            
+
             // Get HSL and darken
             HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
             HSL.l -= 5;
-            
+
             // Convert back to RGB
             RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
-            
+
             // Apply darkened colour to background
             target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
             break;
@@ -127,14 +127,14 @@ function Draw(pTarget) {
             // Get colour
             original = target.style.background;
             splitRGB = original.substring(4).slice(0, -1).split(`, `);
-            
+
             // Get HSL and darken
             HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
             HSL.l += 5;
-            
+
             // Convert back to RGB
             RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
-            
+
             // Apply darkened colour to background
             target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
             break;
