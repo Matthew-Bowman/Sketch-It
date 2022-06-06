@@ -235,9 +235,9 @@ function HSLtoRGB(pH, pS, pL) {
 
     // Checking for gray
     if (s == 0) {
-        r = l / 100 * 255;
-        g = l / 100 * 255;
-        b = l / 100 * 255;
+        r = l * 255;
+        g = l * 255;
+        b = l * 255;
     } else {
         // Setting temporary variables
         if (l < 0.5)
