@@ -3,6 +3,7 @@
 
 > To-Do
 - Remove Right Click Place
+- Custom context menu
 - Save Feature
 - Download Image
 - Add Undo Functionality (CTRL + Z)
