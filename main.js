@@ -43,6 +43,10 @@ gridCheckbox.addEventListener("change", () => {
     DrawGrid();
 });
 
+document.addEventListener("contextmenu", e => {
+    e.preventDefault();
+})
+
 // FUNCTIONS
 function InitialiseGrid() {
     // Clear Container Contents
