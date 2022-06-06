@@ -86,10 +86,10 @@ function InitialiseGrid() {
 function Draw(pTarget) {
     // Initialisation
     let target = pTarget;
-    
+
     const drawingOption = document.querySelector("input[name='drawing-option']:checked").value;
 
-    switch(drawingOption) {
+    switch (drawingOption) {
         case 'Pencil':
             // Change div Colour
             target.setAttribute(`data-touched`, true);
@@ -133,8 +133,65 @@ function DrawGrid() {
     const checked = gridCheckbox.checked;
     const tiles = document.querySelectorAll(`.tile`);
 
-    if(checked) 
+    if (checked)
         tiles.forEach(tile => tile.classList.add("grid"));
-    else 
+    else
         tiles.forEach(tile => tile.classList.remove("grid"));
+}
+
+function RGBtoHSL(pR, pG, pB) {
+    // Conversion from 0-255 to 0-1
+    let r = pR / 255;
+    let g = pG / 255;
+    let b = pB / 255;
+
+    // Get min and max
+    let min = Math.min(r, g, b);
+    let max = Math.max(r, g, b);
+
+    // Get luminance
+    let l = (min + max) / 2;
+
+    // Get saturation
+    let s;
+    if (min == max)
+        s = 0;
+    else
+        if (l <= 0.5)
+            s = (max - min) / (max + min);
+        else
+            s = (max - min) / (2.0 - max - min);
+
+    // Get hue
+    let h;
+
+    if (s == 0)
+        h = 0
+    else {
+        switch (max) {
+            case r:
+                h = (g - b) / (max - min);
+                break;
+            case g:
+                h = 2.0 + (b - r) / (max - min);
+                break;
+            case b:
+                h = 4.0 + (r - g) / (max - min);
+                break;
+        }
+    }
+
+    // Convert hue to degrees on colour circle
+    h *= 60;
+
+    // Check for negative hue
+    if (h < 0)
+        h += 360;
+
+    // Return final values
+    return {
+        h: h.toFixed(2),
+        s: (s * 100).toFixed(2),
+        l: (l * 100).toFixed(2),
+    };
 }
