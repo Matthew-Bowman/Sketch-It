@@ -86,6 +86,7 @@ function InitialiseGrid() {
 function Draw(pTarget) {
     // Initialisation
     let target = pTarget;
+    let original, splitRGB, HSL, RGB; // Variables for lightening/darkening process
 
     const drawingOption = document.querySelector("input[name='drawing-option']:checked").value;
 
@@ -109,20 +110,33 @@ function Draw(pTarget) {
             break;
         case 'Darker':
             // Get colour
-            const original = target.style.background;
-            const splitRGB = original.substring(4).slice(0, -1).split(`, `);
+            original = target.style.background;
+            splitRGB = original.substring(4).slice(0, -1).split(`, `);
             
             // Get HSL and darken
-            let HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
+            HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
             HSL.l -= 5;
             
             // Convert back to RGB
-            const RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
+            RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
             
             // Apply darkened colour to background
             target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
             break;
         case 'Lighter':
+            // Get colour
+            original = target.style.background;
+            splitRGB = original.substring(4).slice(0, -1).split(`, `);
+            
+            // Get HSL and darken
+            HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
+            HSL.l += 5;
+            
+            // Convert back to RGB
+            RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
+            
+            // Apply darkened colour to background
+            target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
             break;
     }
 
