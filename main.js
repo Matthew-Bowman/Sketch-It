@@ -217,9 +217,9 @@ function RGBtoHSL(pR, pG, pB) {
 
     // Return final values
     return {
-        h: h.toFixed(2),
-        s: (s * 100).toFixed(2),
-        l: (l * 100).toFixed(2),
+        h: Number(h.toFixed(2)),
+        s: Number((s * 100).toFixed(2)),
+        l: Number((l * 100).toFixed(2)),
     };
 }
 
