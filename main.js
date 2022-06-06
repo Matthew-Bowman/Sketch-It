@@ -108,6 +108,19 @@ function Draw(pTarget) {
             rainbowArray.push(shiftedColour);
             break;
         case 'Darker':
+            // Get colour
+            const original = target.style.background;
+            const splitRGB = original.substring(4).slice(0, -1).split(`, `);
+            
+            // Get HSL and darken
+            let HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
+            HSL.l -= 5;
+            
+            // Convert back to RGB
+            const RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
+            
+            // Apply darkened colour to background
+            target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
             break;
         case 'Lighter':
             break;
