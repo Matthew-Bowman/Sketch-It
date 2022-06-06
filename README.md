@@ -3,7 +3,6 @@
 
 > To-Do
 - Remove Right Click Place
-- Remove Content Menu (Right Click)
 - Save Feature
 - Download Image
 - Add Undo Functionality (CTRL + Z)
