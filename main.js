@@ -48,7 +48,7 @@ document.addEventListener("contextmenu", e => {
     e.preventDefault();
 
     // Position context menu
-    const {clientX: mouseX, clientY: mouseY} = e;    
+    const { clientX: mouseX, clientY: mouseY } = e;
     contextMenu.style.left = `${mouseX}px`
     contextMenu.style.top = `${mouseY}px`
 
@@ -57,7 +57,7 @@ document.addEventListener("contextmenu", e => {
 });
 
 document.addEventListener(`click`, e => {
-    if(e.target.offsetParent != contextMenu)
+    if (e.target.offsetParent != contextMenu)
         contextMenu.classList.remove(`visible`);
 })
 
@@ -109,54 +109,56 @@ function Draw(pTarget) {
 
     const drawingOption = document.querySelector("input[name='drawing-option']:checked").value;
 
-    switch (drawingOption) {
-        case 'Pencil':
-            // Change div Colour
-            target.setAttribute(`data-touched`, true);
-            target.style.background = drawColour;
-            break;
-        case 'Eraser':
-            // Set div colour to bg colour
-            target.setAttribute(`data-touched`, false);
-            target.style.background = backgroundColour;
-            break;
-        case 'Rainbow':
-            // Cycle through array
-            const shiftedColour = rainbowArray.shift();
-            target.setAttribute(`data-touched`, true);
-            target.style.background = shiftedColour;
-            rainbowArray.push(shiftedColour);
-            break;
-        case 'Darker':
-            // Get colour
-            original = target.style.background;
-            splitRGB = original.substring(4).slice(0, -1).split(`, `);
+    if (!contextMenu.classList.contains(`visible`)) {
+        switch (drawingOption) {
+            case 'Pencil':
+                // Change div Colour
+                target.setAttribute(`data-touched`, true);
+                target.style.background = drawColour;
+                break;
+            case 'Eraser':
+                // Set div colour to bg colour
+                target.setAttribute(`data-touched`, false);
+                target.style.background = backgroundColour;
+                break;
+            case 'Rainbow':
+                // Cycle through array
+                const shiftedColour = rainbowArray.shift();
+                target.setAttribute(`data-touched`, true);
+                target.style.background = shiftedColour;
+                rainbowArray.push(shiftedColour);
+                break;
+            case 'Darker':
+                // Get colour
+                original = target.style.background;
+                splitRGB = original.substring(4).slice(0, -1).split(`, `);
 
-            // Get HSL and darken
-            HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
-            HSL.l -= 5;
+                // Get HSL and darken
+                HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
+                HSL.l -= 5;
 
-            // Convert back to RGB
-            RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
+                // Convert back to RGB
+                RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
 
-            // Apply darkened colour to background
-            target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
-            break;
-        case 'Lighter':
-            // Get colour
-            original = target.style.background;
-            splitRGB = original.substring(4).slice(0, -1).split(`, `);
+                // Apply darkened colour to background
+                target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
+                break;
+            case 'Lighter':
+                // Get colour
+                original = target.style.background;
+                splitRGB = original.substring(4).slice(0, -1).split(`, `);
 
-            // Get HSL and darken
-            HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
-            HSL.l += 5;
+                // Get HSL and darken
+                HSL = RGBtoHSL(splitRGB[0], splitRGB[1], splitRGB[2]);
+                HSL.l += 5;
 
-            // Convert back to RGB
-            RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
+                // Convert back to RGB
+                RGB = HSLtoRGB(HSL.h, HSL.s, HSL.l);
 
-            // Apply darkened colour to background
-            target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
-            break;
+                // Apply darkened colour to background
+                target.style.background = `rgb(${RGB.r}, ${RGB.g}, ${RGB.b})`;
+                break;
+        }
     }
 
 }
