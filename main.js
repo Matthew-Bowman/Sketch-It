@@ -6,6 +6,7 @@ const sizeRanger = document.querySelector(".size-picker");
 const sizeLabel = document.querySelector(".size-label");
 const resetButton = document.querySelector(".reset-button");
 const gridCheckbox = document.querySelector(".grid-option");
+const contextMenu = document.querySelector(".context-menu");
 
 let drawColour = "rgb(0, 0, 0)";
 let backgroundColour = "rgb(255, 255, 255)";
@@ -45,7 +46,7 @@ gridCheckbox.addEventListener("change", () => {
 
 document.addEventListener("contextmenu", e => {
     e.preventDefault();
-})
+});
 
 // FUNCTIONS
 function InitialiseGrid() {
