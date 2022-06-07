@@ -63,6 +63,10 @@ document.addEventListener(`click`, e => {
 
 contextMenu.addEventListener(`click`, e => {
     const value = e.target.getAttribute("data-value");
+
+    switch(value) {
+        
+    }
 })
 
 // FUNCTIONS
