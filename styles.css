@@ -184,6 +184,11 @@ body {
     display: block;
 }
 
+.item {
+    padding: 12px 24px;
+    min-width: 128px;
+}
+
 @media only screen and (max-width: 576px) {
     .container {
         min-width: 256px;
