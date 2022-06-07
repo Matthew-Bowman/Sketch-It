@@ -65,7 +65,9 @@ contextMenu.addEventListener(`click`, e => {
     const value = e.target.getAttribute("data-value");
 
     switch(value) {
-        
+        case "Save":
+            Save();
+            break;
     }
 })
 
