@@ -3,5 +3,6 @@
 
 > To-Do
 - Add Undo Functionality (CTRL + Z)
+- Brush sizes
 
 > Known Issues
