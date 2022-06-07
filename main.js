@@ -63,6 +63,7 @@ document.addEventListener(`click`, e => {
 
 contextMenu.addEventListener(`click`, e => {
     const value = e.target.getAttribute("data-value");
+    contextMenu.classList.remove(`visible`);
 
     switch(value) {
         case "Save":
