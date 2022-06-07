@@ -61,6 +61,10 @@ document.addEventListener(`click`, e => {
         contextMenu.classList.remove(`visible`);
 })
 
+contextMenu.addEventListener(`click`, e => {
+    const value = e.target.getAttribute("data-value");
+})
+
 // FUNCTIONS
 function InitialiseGrid() {
     // Clear Container Contents
