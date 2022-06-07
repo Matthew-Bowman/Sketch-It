@@ -189,6 +189,11 @@ body {
     min-width: 128px;
 }
 
+.item:hover {
+    background:rgb(235, 235, 235);
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 576px) {
     .container {
         min-width: 256px;
