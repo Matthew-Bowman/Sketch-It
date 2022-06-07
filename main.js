@@ -46,6 +46,14 @@ gridCheckbox.addEventListener("change", () => {
 
 document.addEventListener("contextmenu", e => {
     e.preventDefault();
+
+    // Position context menu
+    const {clientX: mouseX, clientY: mouseY} = e;    
+    contextMenu.style.left = `${mouseX}px`
+    contextMenu.style.top = `${mouseY}px`
+
+    // Show context menu
+    contextMenu.classList.add(`visible`);
 });
 
 // FUNCTIONS
