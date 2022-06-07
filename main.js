@@ -56,6 +56,11 @@ document.addEventListener("contextmenu", e => {
     contextMenu.classList.add(`visible`);
 });
 
+document.addEventListener(`click`, e => {
+    if(e.target.offsetParent != contextMenu)
+        contextMenu.classList.remove(`visible`);
+})
+
 // FUNCTIONS
 function InitialiseGrid() {
     // Clear Container Contents
