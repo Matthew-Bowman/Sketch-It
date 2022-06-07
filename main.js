@@ -63,6 +63,7 @@ function InitialiseGrid() {
 
             // Give div Class
             div.classList.add("tile");
+            div.id = `(${x - 1},${y - 1})`
 
             // Give div Attributes
             div.setAttribute(`data-xpos`, x);
@@ -302,4 +303,30 @@ function HSLtoRGB(pH, pS, pL) {
         // Return value
         return val;
     }
+}
+
+function Save() {
+    // Setup Canvas
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+
+    // Get Context
+    let ctx = canvas.getContext('2d');
+    ctx.fill = `black`;
+
+    // Draw
+    for (let x = 0; x < canvas.width; x++) {
+        for (let y = 0; y < canvas.height; y++) {
+            const tile = document.getElementById(`(${x},${y})`);
+            ctx.fillStyle = tile.style.background;
+            ctx.fillRect(x, y, 1, 1);
+        }
+    }
+
+    // Download
+    const link = document.createElement(`a`);
+    link.download = "drawing.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
 }
