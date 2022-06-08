@@ -66,11 +66,15 @@ contextMenu.addEventListener(`click`, e => {
     const value = e.target.getAttribute("data-value");
     contextMenu.classList.remove(`visible`);
 
-    switch(value) {
+    switch (value) {
         case "Save":
             Save();
             break;
     }
+})
+
+document.addEventListener(`keypress`, e => {
+    
 })
 
 // FUNCTIONS
