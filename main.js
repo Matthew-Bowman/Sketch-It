@@ -74,7 +74,10 @@ contextMenu.addEventListener(`click`, e => {
 })
 
 document.addEventListener(`keypress`, e => {
-    
+    // Control hotkeys
+    if(e.ctrlKey) {
+        
+    }
 })
 
 // FUNCTIONS
