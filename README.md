@@ -2,7 +2,7 @@
 ## An online drawing tool focussed on creating rasterised artwork
 
 > To-Do
-- Add Undo Functionality (CTRL + Z)
+- Add Undo Functionality (CTRL + Z) - Started
 - Brush sizes
 
 > Known Issues
