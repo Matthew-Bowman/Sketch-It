@@ -12,6 +12,7 @@ let drawColour = "rgb(0, 0, 0)";
 let backgroundColour = "rgb(255, 255, 255)";
 let rainbowArray = ["rgb(255, 0, 0)", "rgb(255, 127, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)", "rgb(0, 0, 255)", "rgb(75, 0, 130)", "rgb(143, 0, 255)"];
 let size = 16;
+let history = [];
 
 // Page Initialisation
 InitialiseGrid();
