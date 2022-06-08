@@ -77,7 +77,8 @@ document.addEventListener(`keypress`, e => {
     // Control hotkeys
     if(e.ctrlKey) {
         switch (e.key) {
-            
+            case "z":
+                break;
         }
     }
 })
