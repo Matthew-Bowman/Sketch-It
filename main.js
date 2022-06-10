@@ -22,7 +22,16 @@ let history = [];
 InitialiseGrid();
 
 // Popper Setups
-const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip);
+const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
+    modifiers: [
+        {
+            name: 'offset',
+            options: {
+                offset: [0, 8],
+            },
+        },
+    ],
+});
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
@@ -82,7 +91,7 @@ contextMenu.addEventListener(`click`, e => {
 
 document.addEventListener(`keypress`, e => {
     // Control hotkeys
-    if(e.ctrlKey) {
+    if (e.ctrlKey) {
         switch (e.key) {
             case "z":
                 break;
