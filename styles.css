@@ -52,7 +52,7 @@ body {
     transform: translate(-25%, -25%);
 }
 
-.colour-picker:hover { 
+.colour-picker:hover {
     cursor: pointer;
 }
 
@@ -161,13 +161,13 @@ body {
     border-left: 1px solid rgb(36, 36, 36);
 }
 
-.drawing-options input[type="radio"]:hover + label {
+.drawing-options input[type="radio"]:hover+label {
     background-color: rgb(240, 240, 240);
     cursor: pointer;
 }
 
-.drawing-options input[type="radio"]:checked + label {
-	background-color: rgb(36, 36, 36);
+.drawing-options input[type="radio"]:checked+label {
+    background-color: rgb(36, 36, 36);
     color: rgb(230, 230, 230);
 }
 
@@ -190,7 +190,7 @@ body {
 }
 
 .item:hover {
-    background:rgb(235, 235, 235);
+    background: rgb(235, 235, 235);
     cursor: pointer;
 }
 
@@ -198,4 +198,14 @@ body {
     .container {
         min-width: 256px;
     }
+}
+
+/* Tooltip Styles */
+#tooltip {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
 }
