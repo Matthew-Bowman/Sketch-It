@@ -8,3 +8,6 @@
 
 > Known Issues
 - Lighter & Darker tile effect used on background change when background colour is changed
+
+> Libraries
+- Popper
