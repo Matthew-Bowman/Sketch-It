@@ -37,6 +37,8 @@ const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
 const pencilPopperShowEvents = [`mouseenter`, `focus`];
 const pencilPopperHideEvents = [`mouseleave`, `blur`];
 
+pencilPopperShowEvents.forEach(event => pencilButton.addEventListener(event, show));
+pencilPopperHideEvents.forEach(event => pencilButton.addEventListener(event, hide));
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
