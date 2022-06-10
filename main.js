@@ -97,7 +97,7 @@ rainbowPopperShowEvents.forEach((event) => {
     });
 });
 
-eraserPopperHideEvents.forEach((event) => {
+rainbowPopperHideEvents.forEach((event) => {
     rainbowButton.addEventListener(event, () => {
         PopperHide(rainbowTooltip)
     });
