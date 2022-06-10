@@ -4,7 +4,6 @@
 > To-Do
 - Add Undo Functionality (CTRL + Z) - Started
 - Brush sizes
-- Tooltips
 
 > Known Issues
 - Lighter & Darker tile effect used on background change when background colour is changed
