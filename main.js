@@ -21,6 +21,9 @@ let history = [];
 // Page Initialisation
 InitialiseGrid();
 
+// Popper Setups
+const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip);
+
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
     drawColour = pencilPicker.value;
