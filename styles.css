@@ -208,6 +208,11 @@ body {
     padding: 4px 8px;
     font-size: 13px;
     border-radius: 4px;
+    display: none;
+}
+
+#tooltip[data-show] {
+  display: block;
 }
 
 #arrow,
