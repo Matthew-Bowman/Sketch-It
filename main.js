@@ -60,6 +60,21 @@ pencilPopperHideEvents.forEach((event) => {
     });
 });
 
+const eraserPopperShowEvents = [`mouseenter`];
+const eraserPopperHideEvents = [`mouseleave`];
+
+eraserPopperShowEvents.forEach((event) => {
+    eraserButton.addEventListener(event, () => {
+        PopperShow(eraserTooltip, eraserPopper)
+    });
+});
+
+eraserPopperHideEvents.forEach((event) => {
+    eraserButton.addEventListener(event, () => {
+        PopperHide(eraserTooltip)
+    });
+});
+
 // pencilPopperHideEvents.forEach(event => pencilButton.addEventListener(event, PopperHide(pencilTooltip)));
 
 // Event Listeners
