@@ -201,7 +201,7 @@ body {
 }
 
 /* Tooltip Styles */
-#tooltip {
+.tooltip {
     background: #333;
     color: white;
     font-weight: bold;
