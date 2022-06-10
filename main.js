@@ -57,6 +57,19 @@ const rainbowPopper = Popper.createPopper(rainbowButton, rainbowTooltip, {
     ],
 });
 
+const darkerButton = document.querySelector("#darker-button");
+const darkerTooltip = document.querySelector("#darker-tooltip");
+const darkerPopper = Popper.createPopper(darkerButton, darkerTooltip, {
+    modifiers: [
+        {
+            name: 'offset',
+            options: {
+                offset: [0, 8],
+            },
+        },
+    ],
+});
+
 // Popper Events
 const pencilPopperShowEvents = [`mouseenter`];
 const pencilPopperHideEvents = [`mouseleave`];
@@ -100,6 +113,21 @@ rainbowPopperShowEvents.forEach((event) => {
 rainbowPopperHideEvents.forEach((event) => {
     rainbowButton.addEventListener(event, () => {
         PopperHide(rainbowTooltip)
+    });
+});
+
+const darkerPopperShowEvents = [`mouseenter`];
+const darkerPopperHideEvents = [`mouseleave`];
+
+darkerPopperShowEvents.forEach((event) => {
+    darkerButton.addEventListener(event, () => {
+        PopperShow(darkerTooltip, darkerPopper)
+    });
+});
+
+darkerPopperHideEvents.forEach((event) => {
+    darkerButton.addEventListener(event, () => {
+        PopperHide(darkerTooltip)
     });
 });
 
