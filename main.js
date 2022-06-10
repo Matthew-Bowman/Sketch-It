@@ -8,6 +8,10 @@ const resetButton = document.querySelector(".reset-button");
 const gridCheckbox = document.querySelector(".grid-option");
 const contextMenu = document.querySelector(".context-menu");
 
+// Tooltips
+const pencilButton = document.querySelector("#pencil-button");
+const pencilTooltip = document.querySelector("#pencil-tooltip");
+
 let drawColour = "rgb(0, 0, 0)";
 let backgroundColour = "rgb(255, 255, 255)";
 let rainbowArray = ["rgb(255, 0, 0)", "rgb(255, 127, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)", "rgb(0, 0, 255)", "rgb(75, 0, 130)", "rgb(143, 0, 255)"];
