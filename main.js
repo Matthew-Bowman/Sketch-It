@@ -34,11 +34,22 @@ const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
 });
 
 // Popper Events
-const pencilPopperShowEvents = [`mouseenter`, `focus`];
-const pencilPopperHideEvents = [`mouseleave`, `blur`];
+const pencilPopperShowEvents = [`mouseenter`];
+const pencilPopperHideEvents = [`mouseleave`];
 
-pencilPopperShowEvents.forEach(event => pencilButton.addEventListener(event, PopperShow(pencilTooltip, pencilPopper)));
-pencilPopperHideEvents.forEach(event => pencilButton.addEventListener(event, PopperHide(pencilTooltip)));
+pencilPopperShowEvents.forEach((event) => {
+    pencilButton.addEventListener(event, () => {
+        PopperShow(pencilTooltip, pencilPopper)
+    });
+});
+
+pencilPopperHideEvents.forEach((event) => {
+    pencilButton.addEventListener(event, () => {
+        PopperHide(pencilTooltip)
+    });
+});
+
+// pencilPopperHideEvents.forEach(event => pencilButton.addEventListener(event, PopperHide(pencilTooltip)));
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
