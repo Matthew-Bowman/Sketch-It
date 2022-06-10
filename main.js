@@ -33,6 +33,11 @@ const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
     ],
 });
 
+// Popper Events
+const pencilPopperShowEvents = [`mouseenter`, `focus`];
+const pencilPopperHideEvents = [`mouseleave`, `blur`];
+
+
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
     drawColour = pencilPicker.value;
@@ -384,7 +389,6 @@ function Save() {
     link.href = canvas.toDataURL("image/png");
     link.click();
 }
-
 
 function PopperShow(pTooltip, pInstance) {
     pTooltip.setAttribute(`data-show`, '');
