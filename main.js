@@ -31,6 +31,19 @@ const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
     ],
 });
 
+const eraserButton = document.querySelector("#eraser-button");
+const eraserTooltip = document.querySelector("#eraser-tooltip");
+const eraserPopper = Popper.createPopper(eraserButton, eraserTooltip, {
+    modifiers: [
+        {
+            name: 'offset',
+            options: {
+                offset: [0, 8],
+            },
+        },
+    ],
+});
+
 // Popper Events
 const pencilPopperShowEvents = [`mouseenter`];
 const pencilPopperHideEvents = [`mouseleave`];
