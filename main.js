@@ -44,6 +44,19 @@ const eraserPopper = Popper.createPopper(eraserButton, eraserTooltip, {
     ],
 });
 
+const rainbowButton = document.querySelector("#rainbow-button");
+const rainbowTooltip = document.querySelector("#rainbow-tooltip");
+const rainbowPopper = Popper.createPopper(rainbowButton, rainbowTooltip, {
+    modifiers: [
+        {
+            name: 'offset',
+            options: {
+                offset: [0, 8],
+            },
+        },
+    ],
+});
+
 // Popper Events
 const pencilPopperShowEvents = [`mouseenter`];
 const pencilPopperHideEvents = [`mouseleave`];
@@ -75,7 +88,20 @@ eraserPopperHideEvents.forEach((event) => {
     });
 });
 
-// pencilPopperHideEvents.forEach(event => pencilButton.addEventListener(event, PopperHide(pencilTooltip)));
+const rainbowPopperShowEvents = [`mouseenter`];
+const rainbowPopperHideEvents = [`mouseleave`];
+
+rainbowPopperShowEvents.forEach((event) => {
+    rainbowButton.addEventListener(event, () => {
+        PopperShow(rainbowTooltip, rainbowPopper)
+    });
+});
+
+eraserPopperHideEvents.forEach((event) => {
+    rainbowButton.addEventListener(event, () => {
+        PopperHide(rainbowTooltip)
+    });
+});
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
