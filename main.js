@@ -21,7 +21,7 @@ let history = [];
 // Page Initialisation
 InitialiseGrid();
 
-// Popper Setups
+// Popper Instances
 const pencilPopper = Popper.createPopper(pencilButton, pencilTooltip, {
     modifiers: [
         {
