@@ -384,3 +384,13 @@ function Save() {
     link.href = canvas.toDataURL("image/png");
     link.click();
 }
+
+
+function PopperShow(pTooltip, pInstance) {
+    pTooltip.setAttribute(`data-show`, '');
+    pInstance.update();
+}
+
+function PopperHide(pTooltip) {
+    pTooltip.removeAttribute(`data-show`);
+}
