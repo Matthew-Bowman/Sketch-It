@@ -549,9 +549,11 @@ class PopperClass {
         pTooltip.removeAttribute(`data-show`);
     }
 
-    AddEvents = (pButton, pEvents, pCallback) => {
+    AddEvents = (pButton, pEvents, pCallback, pTooltip, pInstance) => {
         pEvents.forEach(event => {
-            pButton.addEventListener(event, pCallback);
+            pButton.addEventListener(event, () => {
+                pCallback(pTooltip, pInstance)
+            });
         })
     }
 }
