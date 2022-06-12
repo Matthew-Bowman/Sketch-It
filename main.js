@@ -520,7 +520,7 @@ function PopperHide(pTooltip) {
     pTooltip.removeAttribute(`data-show`);
 }
 
-class Popper {
+class PopperClass {
     constructor(pButtonID, pTooltipID, pShowEvents, pHideEvents) {
         // Initialise Variables
         this.instance;
