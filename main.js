@@ -519,3 +519,7 @@ function PopperShow(pTooltip, pInstance) {
 function PopperHide(pTooltip) {
     pTooltip.removeAttribute(`data-show`);
 }
+
+class Popper {
+    
+}
