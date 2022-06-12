@@ -65,6 +65,8 @@ let history = [];
 // Page Initialisation
 InitialiseGrid();
 
+// Instantiate PopperClasses
+const pencilPopper = new PopperClass(`#pencil-button`, `#pencil-tooltip`, [`mouseenter`], [`mouseleave`]);
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
