@@ -521,5 +521,7 @@ function PopperHide(pTooltip) {
 }
 
 class Popper {
-    
+    constructor() {
+        
+    }
 }
