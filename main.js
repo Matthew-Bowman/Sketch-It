@@ -521,7 +521,7 @@ function PopperHide(pTooltip) {
 }
 
 class Popper {
-    constructor() {
+    constructor(pButtonID, pTooltipID, pShowEvents, pHideEvents) {
         
     }
 }
