@@ -522,6 +522,10 @@ function PopperHide(pTooltip) {
 
 class Popper {
     constructor(pButtonID, pTooltipID, pShowEvents, pHideEvents) {
-        
+        // Initialise Variables
+        this.instance;
+        this.button; this.tooltip;
+        this.buttonID = pButtonID; this.tooltipID = pTooltipID;
+        this.showEvents = pShowEvents; this.hideEvents = pHideEvents;
     }
 }
