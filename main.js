@@ -546,6 +546,8 @@ class PopperClass {
     }
 
     AddEvents = (pButton, pEvents, pCallback) => {
-
+        pEvents.forEach(event => {
+            pButton.addEventListener(event, pCallback);
+        })
     }
 }
