@@ -6,13 +6,22 @@ class PopperClass {
         this.button; this.tooltip;
         this.buttonID = pButtonID; this.tooltipID = pTooltipID;
         this.showEvents = pShowEvents; this.hideEvents = pHideEvents;
-    
+
         // Perform Query Selects
         this.button = document.querySelector(this.buttonID);
         this.tooltip = document.querySelector(this.tooltipID);
 
         // Instantiate Popper
-        this.instance = Popper.createPopper(this.button, this.tooltip);
+        this.instance = Popper.createPopper(this.button, this.tooltip, {
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: [0, 8],
+                    },
+                },
+            ],
+        });
 
         // Add Events to Popper
         this.AddEvents(this.button, this.showEvents, this.PopperShow, this.tooltip, this.instance);
