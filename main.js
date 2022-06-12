@@ -535,4 +535,8 @@ class PopperClass {
         // Instantiate Popper
         this.instance = Popper.createPopper(this.button, this.tooltip);
     }
+
+    PopperShow = () => {
+        
+    }
 }
