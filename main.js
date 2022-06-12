@@ -531,5 +531,8 @@ class PopperClass {
         // Perform Query Selects
         this.button = document.querySelector(this.buttonID);
         this.tooltip = document.querySelector(this.tooltipID);
+
+        // Instantiate Popper
+        this.instance = Popper.createPopper(this.button, this.tooltip);
     }
 }
