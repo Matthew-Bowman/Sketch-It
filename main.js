@@ -540,4 +540,8 @@ class PopperClass {
         pTooltip.setAttribute(`data-show`, '');
         pInstance.update();
     }
+
+    PopperHide = (pTooltip) => {
+
+    }
 }
