@@ -67,6 +67,10 @@ InitialiseGrid();
 
 // Instantiate PopperClasses
 const pencilPopper = new PopperClass(`#pencil-button`, `#pencil-tooltip`, [`mouseenter`], [`mouseleave`]);
+const eraserPopper = new PopperClass(`#eraser-button`, `#eraser-tooltip`, [`mouseenter`], [`mouseleave`]);
+const rainbowPopper = new PopperClass(`#rainbow-button`, `#rainbow-tooltip`, [`mouseenter`], [`mouseleave`]);
+const darkerPopper = new PopperClass(`#darker-button`, `#darker-tooltip`, [`mouseenter`], [`mouseleave`]);
+const lighterPopper = new PopperClass(`#lighter-button`, `#lighter-tooltip`, [`mouseenter`], [`mouseleave`]);
 
 // Event Listeners
 pencilPicker.addEventListener("change", () => {
