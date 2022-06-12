@@ -542,6 +542,6 @@ class PopperClass {
     }
 
     PopperHide = (pTooltip) => {
-
+        pTooltip.removeAttribute(`data-show`);
     }
 }
