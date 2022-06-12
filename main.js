@@ -1,3 +1,42 @@
+// Classes
+class PopperClass {
+    constructor(pButtonID, pTooltipID, pShowEvents, pHideEvents) {
+        // Initialise Variables
+        this.instance;
+        this.button; this.tooltip;
+        this.buttonID = pButtonID; this.tooltipID = pTooltipID;
+        this.showEvents = pShowEvents; this.hideEvents = pHideEvents;
+    
+        // Perform Query Selects
+        this.button = document.querySelector(this.buttonID);
+        this.tooltip = document.querySelector(this.tooltipID);
+
+        // Instantiate Popper
+        this.instance = Popper.createPopper(this.button, this.tooltip);
+
+        // Add Events to Popper
+        this.AddEvents(this.button, this.showEvents, this.PopperShow, this.tooltip, this.instance);
+        this.AddEvents(this.button, this.hideEvents, this.PopperHide, this.tooltip, this.instance);
+    }
+
+    PopperShow = (pTooltip, pInstance) => {
+        pTooltip.setAttribute(`data-show`, '');
+        pInstance.update();
+    }
+
+    PopperHide = (pTooltip) => {
+        pTooltip.removeAttribute(`data-show`);
+    }
+
+    AddEvents = (pButton, pEvents, pCallback, pTooltip, pInstance) => {
+        pEvents.forEach(event => {
+            pButton.addEventListener(event, () => {
+                pCallback(pTooltip, pInstance)
+            });
+        })
+    }
+}
+
 // Variable Initialisation
 const container = document.querySelector(".container");
 const pencilPicker = document.querySelector("#pencil-picker");
@@ -518,42 +557,4 @@ function PopperShow(pTooltip, pInstance) {
 
 function PopperHide(pTooltip) {
     pTooltip.removeAttribute(`data-show`);
-}
-
-class PopperClass {
-    constructor(pButtonID, pTooltipID, pShowEvents, pHideEvents) {
-        // Initialise Variables
-        this.instance;
-        this.button; this.tooltip;
-        this.buttonID = pButtonID; this.tooltipID = pTooltipID;
-        this.showEvents = pShowEvents; this.hideEvents = pHideEvents;
-    
-        // Perform Query Selects
-        this.button = document.querySelector(this.buttonID);
-        this.tooltip = document.querySelector(this.tooltipID);
-
-        // Instantiate Popper
-        this.instance = Popper.createPopper(this.button, this.tooltip);
-
-        // Add Events to Popper
-        this.AddEvents(this.button, this.showEvents, this.PopperShow, this.tooltip, this.instance);
-        this.AddEvents(this.button, this.hideEvents, this.PopperHide, this.tooltip, this.instance);
-    }
-
-    PopperShow = (pTooltip, pInstance) => {
-        pTooltip.setAttribute(`data-show`, '');
-        pInstance.update();
-    }
-
-    PopperHide = (pTooltip) => {
-        pTooltip.removeAttribute(`data-show`);
-    }
-
-    AddEvents = (pButton, pEvents, pCallback, pTooltip, pInstance) => {
-        pEvents.forEach(event => {
-            pButton.addEventListener(event, () => {
-                pCallback(pTooltip, pInstance)
-            });
-        })
-    }
 }
