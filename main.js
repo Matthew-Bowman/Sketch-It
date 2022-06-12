@@ -537,6 +537,7 @@ class PopperClass {
     }
 
     PopperShow = (pTooltip, pInstance) => {
-        
+        pTooltip.setAttribute(`data-show`, '');
+        pInstance.update();
     }
 }
