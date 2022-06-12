@@ -534,6 +534,10 @@ class PopperClass {
 
         // Instantiate Popper
         this.instance = Popper.createPopper(this.button, this.tooltip);
+
+        // Add Events to Popper
+        this.AddEvents(this.button, this.showEvents, this.PopperShow(this.tooltip, this.instance));
+        this.AddEvents(this.button, this.hideEvents, this.PopperHide(this.tooltip));
     }
 
     PopperShow = (pTooltip, pInstance) => {
