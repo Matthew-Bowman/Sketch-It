@@ -527,5 +527,9 @@ class PopperClass {
         this.button; this.tooltip;
         this.buttonID = pButtonID; this.tooltipID = pTooltipID;
         this.showEvents = pShowEvents; this.hideEvents = pHideEvents;
+    
+        // Perform Query Selects
+        this.button = document.querySelector(this.buttonID);
+        this.tooltip = document.querySelector(this.tooltipID);
     }
 }
