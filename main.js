@@ -399,21 +399,23 @@ function HSLtoRGB(pH, pS, pL) {
 }
 
 function Save() {
+    // Variable Initialisation
+    const pixelSize = 16;
     // Setup Canvas
     const canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
+    canvas.width = pixelSize * size;
+    canvas.height = pixelSize * size;
 
     // Get Context
     let ctx = canvas.getContext('2d');
     ctx.fill = `black`;
 
     // Draw
-    for (let x = 0; x < canvas.width; x++) {
-        for (let y = 0; y < canvas.height; y++) {
+    for (let x = 0; x < size; x++) {
+        for (let y = 0; y < size; y++) {
             const tile = document.getElementById(`(${x},${y})`);
             ctx.fillStyle = tile.style.background;
-            ctx.fillRect(x, y, 1, 1);
+            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
         }
     }
 
