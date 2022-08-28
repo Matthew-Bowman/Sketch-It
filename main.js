@@ -415,7 +415,7 @@ function Save() {
         for (let y = 0; y < size; y++) {
             const tile = document.getElementById(`(${x},${y})`);
             ctx.fillStyle = tile.style.background;
-            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+            ctx.fillRect(y * pixelSize, x * pixelSize, pixelSize, pixelSize);
         }
     }
 
